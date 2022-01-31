@@ -9,14 +9,14 @@ import 'package:entve/widgets/custom_app_bar.dart';
 import 'package:entve/widgets/previews.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class AnimeScreen extends StatefulWidget {
+  const AnimeScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _AnimeScreenState createState() => _AnimeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _AnimeScreenState extends State<AnimeScreen> {
   late ScrollController _scrollController;
 
   @override
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-            child: ContentHeader(featuredContent: spidermanContent),
+            child: ContentHeader(featuredContent: sintelContent),
           ),
           SliverPadding(
             padding: const EdgeInsets.only(top: 20.0),

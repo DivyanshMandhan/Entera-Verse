@@ -3,6 +3,11 @@ class Assets {
 
   static const String entverse = '${_images}entera_verse.png';
 
+  static const String spiderman = '${_images}spiderman.jpg';
+  static const String spidermanTitle = '${_images}spiderman_title.png';
+  static const String spidermanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/spiderman.mp4';
+
   static const String sintel = '${_images}sintel.jpg';
   static const String sintelTitle = '${_images}sintel_title.png';
   static const String sintelVideoUrl =

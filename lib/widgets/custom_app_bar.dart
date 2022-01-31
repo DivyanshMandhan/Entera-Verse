@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:entve/screens/anime_nav_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -43,13 +44,17 @@ class _CustomAppBarMobile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _AppBarButton(
-                  title: 'TV Shows',
-                  onTap: () => print('TV Shows'),
-                ),
+                    title: 'Anime',
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AnimeNavScreen()));
+                    }),
                 _AppBarButton(
-                  title: 'Movies',
-                  onTap: () => print('Movies'),
-                ),
+                    title: 'Music',
+                    onTap: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => const MusicScreen()));
+                    }),
                 _AppBarButton(
                   title: 'My List',
                   onTap: () => print('My List'),
@@ -80,12 +85,14 @@ class _CustomAppBarDesktop extends StatelessWidget {
                   onTap: () => print('Home'),
                 ),
                 _AppBarButton(
-                  title: 'TV Shows',
-                  onTap: () => print('TV Shows'),
-                ),
+                    title: 'Anime',
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AnimeNavScreen()));
+                    }),
                 _AppBarButton(
-                  title: 'Movies',
-                  onTap: () => print('Movies'),
+                  title: 'Music',
+                  onTap: () => print('Music'),
                 ),
                 _AppBarButton(
                   title: 'Latest',
@@ -103,27 +110,13 @@ class _CustomAppBarDesktop extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                const Spacer(),
                 IconButton(
                   padding: EdgeInsets.zero,
                   icon: Icon(Icons.search),
                   iconSize: 28.0,
                   color: Colors.white,
                   onPressed: () => print('Search'),
-                ),
-                _AppBarButton(
-                  title: 'KIDS',
-                  onTap: () => print('KIDS'),
-                ),
-                _AppBarButton(
-                  title: 'DVD',
-                  onTap: () => print('DVD'),
-                ),
-                IconButton(
-                  padding: EdgeInsets.zero,
-                  icon: Icon(Icons.card_giftcard),
-                  iconSize: 28.0,
-                  color: Colors.white,
-                  onPressed: () => print('Gift'),
                 ),
                 IconButton(
                   padding: EdgeInsets.zero,
@@ -143,7 +136,7 @@ class _CustomAppBarDesktop extends StatelessWidget {
 
 class _AppBarButton extends StatelessWidget {
   final String title;
-  final Function onTap;
+  final VoidCallback onTap;
 
   const _AppBarButton({
     Key? key,
@@ -154,7 +147,7 @@ class _AppBarButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: onTap,
       child: Text(
         title,
         style: const TextStyle(

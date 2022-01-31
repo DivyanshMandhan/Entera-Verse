@@ -4,6 +4,15 @@ import 'package:entve/assets.dart';
 import 'package:entve/models/content_model.dart';
 import 'package:flutter/material.dart';
 
+final Content spidermanContent = Content(
+  name: 'Spider Man',
+  imageUrl: Assets.spiderman,
+  titleImageUrl: Assets.spidermanTitle,
+  videoUrl: Assets.spidermanVideoUrl,
+  description:
+      "With Spider-Man's identity now revealed, our friendly\nneighborhood web-slinger is unmasked and no longer able\nto separate his normal life as Peter Parker from the high\nstakes of being a superhero. When Peter asks for help\nfrom Doctor Strange, the stakes become even more\ndangerous, forcing him to discover what it truly means\nto be Spider-Man.",
+);
+
 final Content sintelContent = Content(
   name: 'Sintel',
   imageUrl: Assets.sintel,

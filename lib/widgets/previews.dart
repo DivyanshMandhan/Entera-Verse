@@ -40,7 +40,7 @@ class Previews extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               final Content content = contentList[index];
               return GestureDetector(
-                onTap: () => print(content.name),
+                onTap: () {},
                 child: Stack(
                   alignment: Alignment.center,
                   children: [

@@ -6,17 +6,16 @@ import 'package:entve/screens/home_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class NavScreen extends StatefulWidget {
+class AnimeNavScreen extends StatefulWidget {
   @override
-  _NavScreenState createState() => _NavScreenState();
+  _AnimeNavScreenState createState() => _AnimeNavScreenState();
 }
 
-class _NavScreenState extends State<NavScreen> {
+class _AnimeNavScreenState extends State<AnimeNavScreen> {
   final List<Widget> _screens = [
-    HomeScreen(key: PageStorageKey('HomeScreen')),
     AnimeScreen(key: PageStorageKey('AnimeScreen')),
+    HomeScreen(key: PageStorageKey('HomeScreen')),
     Scaffold(),
     Scaffold(),
     Scaffold(),
