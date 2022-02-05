@@ -1,6 +1,5 @@
+import 'package:entve/models/content_model.dart';
 import 'package:flutter/material.dart';
-
-import 'package:entve/models/models.dart';
 
 class Previews extends StatelessWidget {
   final String title;
@@ -28,6 +27,7 @@ class Previews extends StatelessWidget {
             ),
           ),
         ),
+        // ignore: sized_box_for_whitespace
         Container(
           height: 165.0,
           child: ListView.builder(

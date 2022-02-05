@@ -79,7 +79,15 @@ class _AnimeScreenState extends State<AnimeScreen> {
           SliverToBoxAdapter(
             child: ContentList(
               key: PageStorageKey('originals'),
-              title: 'Netflix Originals',
+              title: 'Winter 2022 Anime',
+              contentList: originals,
+              isOriginals: true,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              key: PageStorageKey('originals'),
+              title: 'Last Updated',
               contentList: originals,
               isOriginals: true,
             ),
@@ -89,7 +97,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
             sliver: SliverToBoxAdapter(
               child: ContentList(
                 key: PageStorageKey('trending'),
-                title: 'Trending',
+                title: 'Top Airing Anime',
                 contentList: trending,
               ),
             ),

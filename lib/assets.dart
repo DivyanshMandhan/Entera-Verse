@@ -1,7 +1,9 @@
 class Assets {
-  static const String _images = 'assets/images/';
+  static const String _images = 'assets/images/movies/';
+  static const String _images1 = 'assets/images/';
 
-  static const String entverse = '${_images}entera_verse.png';
+  static const String entverse = '${_images1}entera_verse.png';
+  static const String entverseWeb = '${_images1}entera_verse_full.png';
 
   static const String spiderman = '${_images}spiderman.jpg';
   static const String spidermanTitle = '${_images}spiderman_title.png';

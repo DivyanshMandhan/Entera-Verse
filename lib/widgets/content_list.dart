@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
+import 'package:entve/models/content_model.dart';
 import 'package:flutter/material.dart';
-import 'package:entve/models/models.dart';
 
 class ContentList extends StatelessWidget {
   final String title;
@@ -33,6 +33,7 @@ class ContentList extends StatelessWidget {
               ),
             ),
           ),
+          // ignore: sized_box_for_whitespace
           Container(
             height: isOriginals ? 500.0 : 220.0,
             child: ListView.builder(

@@ -1,10 +1,10 @@
-// ignore_for_file: avoid_print, deprecated_member_use
+// ignore_for_file: avoid_print, deprecated_member_use, prefer_const_constructors
 
+import 'package:entve/models/content_model.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:entve/widgets/vertical_icon_button.dart';
 import 'package:flutter/material.dart';
 
-import 'package:entve/models/models.dart';
 import 'package:video_player/video_player.dart';
 
 class ContentHeader extends StatelessWidget {
@@ -195,7 +195,7 @@ class __ContentHeaderDesktopState extends State<_ContentHeaderDesktop> {
                     FlatButton.icon(
                       padding:
                           const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
-                      onPressed: () => print('More Info'),
+                      onPressed: () {},
                       color: Colors.white,
                       icon: const Icon(Icons.info_outline, size: 30.0),
                       label: const Text(
