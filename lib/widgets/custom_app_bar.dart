@@ -1,7 +1,7 @@
 // ignore_for_file: todo,avoid_print, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_function_declarations_over_variables, sized_box_for_whitespace
 
 import 'package:entve/screens/nav_screen/anime_nav_screen.dart';
-import 'package:entve/screens/nav_screen.dart';
+import 'package:entve/screens/nav_screen/nav_screen.dart';
 
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
@@ -40,16 +40,12 @@ class _CustomAppBarMobile extends StatefulWidget {
 class __CustomAppBarMobile extends State<_CustomAppBarMobile>
     with SingleTickerProviderStateMixin {
   int toggle = 0;
-  late AnimationController _con;
+
   late TextEditingController _textEditingController;
   @override
   void initState() {
     super.initState();
     _textEditingController = TextEditingController();
-    _con = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 375),
-    );
   }
 
   @override
@@ -59,16 +55,13 @@ class __CustomAppBarMobile extends State<_CustomAppBarMobile>
         children: [
           Image.asset(Assets.entverse),
           const SizedBox(width: 12.0),
-          const Spacer(),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Spacer(),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: 375),
-                  width: (toggle == 0) ? 30.0 : 120.0,
-                  curve: Curves.easeOut,
+                Container(
+                  width: 250.0,
                   decoration: BoxDecoration(
                     color: Colors.white12,
                     borderRadius: BorderRadius.circular(50.0),
@@ -76,11 +69,9 @@ class __CustomAppBarMobile extends State<_CustomAppBarMobile>
                   ),
                   child: Stack(
                     children: [
-                      AnimatedPositioned(
-                        top: -8.0,
-                        left: -8.0,
-                        duration: Duration(milliseconds: 375),
-                        curve: Curves.easeOut,
+                      Positioned(
+                        top: -10.0,
+                        left: -4.0,
                         child: AnimatedOpacity(
                           opacity: 1.0,
                           duration: Duration(milliseconds: 200),
@@ -88,30 +79,17 @@ class __CustomAppBarMobile extends State<_CustomAppBarMobile>
                             iconSize: 22.0,
                             color: Colors.white,
                             icon: Icon(Icons.search_rounded),
-                            onPressed: () {
-                              setState(
-                                () {
-                                  if (toggle == 0) {
-                                    toggle = 1;
-                                    _con.forward();
-                                  } else {
-                                    toggle = 0;
-                                    _textEditingController.clear();
-                                    _con.reverse();
-                                  }
-                                },
-                              );
-                            },
+                            onPressed: () {},
                           ),
                         ),
                       ),
                       AnimatedPositioned(
                         duration: Duration(milliseconds: 375),
-                        left: (toggle == 0) ? 20.0 : 20.0,
+                        left: 25.0,
                         curve: Curves.easeOut,
                         top: 0.0,
                         child: AnimatedOpacity(
-                          opacity: (toggle == 0) ? 0.0 : 1.0,
+                          opacity: 1.0,
                           duration: Duration(milliseconds: 200),
                           child: Container(
                             height: 23.0,
@@ -148,13 +126,13 @@ class __CustomAppBarMobile extends State<_CustomAppBarMobile>
                     ],
                   ),
                 ),
-                // IconButton(
-                //   padding: EdgeInsets.zero,
-                //   icon: Icon(Icons.notifications_outlined),
-                //   iconSize: 30.0,
-                //   color: Colors.white,
-                //   onPressed: () => print('Notifications'),
-                // ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.notifications_outlined),
+                  iconSize: 30.0,
+                  color: Colors.white,
+                  onPressed: () => print('Notifications'),
+                ),
               ],
             ),
           ),

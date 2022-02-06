@@ -1,6 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors
 
-import 'package:entve/screens/nav_screen.dart';
+import 'package:entve/screens/nav_screen/nav_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

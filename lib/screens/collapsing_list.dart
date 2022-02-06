@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file:  prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
@@ -7,6 +7,7 @@ class CollapsingListTile extends StatefulWidget {
   final IconData icon;
   final AnimationController animationController;
   final bool isSelected;
+  final Color color;
   final VoidCallback onTap;
 
   const CollapsingListTile(
@@ -14,6 +15,7 @@ class CollapsingListTile extends StatefulWidget {
       required this.icon,
       required this.animationController,
       this.isSelected = false,
+      required this.color,
       required this.onTap});
 
   @override
@@ -27,6 +29,8 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
   TextStyle listTitleSelectedTextStyle = const TextStyle(
       color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600);
 
+  int currentSelectedIndex = 0;
+
   @override
   void initState() {
     super.initState();
@@ -35,15 +39,6 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
     sizedBoxAnimation =
         Tween<double>(begin: 10, end: 0).animate(widget.animationController);
   }
-
-  List<Color> colors = [
-    Colors.orange,
-    Colors.red,
-    Colors.yellow,
-    Colors.blue,
-    Colors.green
-  ];
-  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +58,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
           children: <Widget>[
             Icon(
               widget.icon,
-              color: widget.isSelected ? colors[_currentIndex] : Colors.grey,
+              color: widget.isSelected ? widget.color : Colors.grey,
               size: 38.0,
             ),
             SizedBox(width: sizedBoxAnimation.value),

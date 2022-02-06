@@ -1,21 +1,20 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:entve/cubits/cubits.dart';
-import 'package:entve/screens/anime_screen.dart';
+import 'package:entve/screens/drawer/collapsing_drawer.dart';
+import 'package:entve/screens/home_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../drawer/anime_collapsing_drawer.dart';
-
-class AnimeNavScreen extends StatefulWidget {
+class NavScreen extends StatefulWidget {
   @override
-  _AnimeNavScreenState createState() => _AnimeNavScreenState();
+  _NavScreenState createState() => _NavScreenState();
 }
 
-class _AnimeNavScreenState extends State<AnimeNavScreen> {
+class _NavScreenState extends State<NavScreen> {
   final List<Widget> _screens = [
-    AnimeScreen(key: PageStorageKey('AnimeScreen')),
+    HomeScreen(key: PageStorageKey('HomeScreen')),
     Scaffold(),
   ];
 
@@ -39,7 +38,7 @@ class _AnimeNavScreenState extends State<AnimeNavScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawerKey,
-      drawer: AnimeCollapsingDrawer(),
+      drawer: CollapsingNavigationDrawer(),
       body: BlocProvider<AppBarCubit>(
         create: (_) => AppBarCubit(),
         child: _screens[_currentIndex],
