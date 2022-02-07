@@ -1,10 +1,13 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:entve/cubits/cubits.dart';
-
+import 'package:entve/screens/anime_screen.dart';
+import 'package:entve/screens/music_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../drawer/anime_collapsing_drawer.dart';
 
 class MusicNavScreen extends StatefulWidget {
   @override
@@ -13,26 +16,31 @@ class MusicNavScreen extends StatefulWidget {
 
 class _MusicNavScreenState extends State<MusicNavScreen> {
   final List<Widget> _screens = [
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
-    Scaffold(),
+    MusicScreen(key: PageStorageKey('MusicScreen')),
     Scaffold(),
   ];
 
-  final Map<String, IconData> _icons = const {
+  final Map<String, IconData> _icons = {
     'Home': Icons.home,
-    'Search': Icons.search,
-    'Coming Soon': Icons.queue_play_next,
     'Downloads': Icons.file_download,
-    'More': Icons.menu,
+    'Menu': Icons.menu,
   };
 
   int _currentIndex = 0;
+  final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+  void _onItemTapped(int index) {
+    index == 2
+        ? _drawerKey.currentState!.openDrawer()
+        : setState(() {
+            _currentIndex = index;
+          });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _drawerKey,
+      drawer: AnimeCollapsingDrawer(),
       body: BlocProvider<AppBarCubit>(
         create: (_) => AppBarCubit(),
         child: _screens[_currentIndex],
@@ -55,7 +63,7 @@ class _MusicNavScreenState extends State<MusicNavScreen> {
               selectedFontSize: 11.0,
               unselectedItemColor: Colors.grey,
               unselectedFontSize: 11.0,
-              onTap: (index) => setState(() => _currentIndex = index),
+              onTap: _onItemTapped,
             )
           : null,
     );

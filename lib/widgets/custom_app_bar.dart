@@ -7,6 +7,8 @@ import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:entve/assets.dart';
 
+import '../screens/nav_screen/music_nav_screen.dart';
+
 class CustomAppBar extends StatelessWidget {
   final double scrollOffset;
 
@@ -221,8 +223,8 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                         borderRadius: BorderRadius.circular(50))),
                   ),
                   onPressed: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => AnimeScreen()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => MusicNavScreen()));
                   },
                   child: Text(
                     'Music',
