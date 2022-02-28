@@ -4,22 +4,26 @@ import 'package:entve/assets.dart';
 import 'package:entve/models/content_model.dart';
 import 'package:flutter/material.dart';
 
-final Content spidermanContent = Content(
+final Content spidermanContent = const Content(
   name: 'Spider Man',
   imageUrl: Assets.spiderman,
   titleImageUrl: Assets.spidermanTitle,
   videoUrl: Assets.spidermanVideoUrl,
+  categories: 'Action/Adventure',
+  year: 2021,
+  length: 148,
+  star: '⭐ ⭐ ⭐ ⭐',
   description:
       "With Spider-Man's identity now revealed, our friendly\nneighborhood web-slinger is unmasked and no longer able\nto separate his normal life as Peter Parker from the high\nstakes of being a superhero. When Peter asks for help\nfrom Doctor Strange, the stakes become even more\ndangerous, forcing him to discover what it truly means\nto be Spider-Man.",
 );
 
-final Content sintelContent = Content(
-  name: 'Sintel',
-  imageUrl: Assets.sintel,
-  titleImageUrl: Assets.sintelTitle,
-  videoUrl: Assets.sintelVideoUrl,
+final Content demonslayerContent = const Content(
+  name: 'Demon Slayer',
+  imageUrl: Assets.demonslayer,
+  titleImageUrl: Assets.demonslayerTitle,
+  videoUrl: Assets.demonslayerVideoUrl,
   description:
-      'A lonely young woman, Sintel, helps and befriends a dragon,\nwhom she calls Scales. But when he is kidnapped by an adult\ndragon, Sintel decides to embark on a dangerous quest to find\nher lost friend Scales.',
+      "The devastation of the Mugen Train incident still weighs heavily on the members of the Demon Slayer Corps. Despite being given time to\nrecover, life must go on, as the wicked never sleep: a vicious demon is terrorizing the alluring women of the Yoshiwara Entertainment District.\nThe Sound Pillar, Tengen Uzui, and his three wives are on the case. However, when he soon loses contact with his spouses, Tengen fears\nthe worst and enlists the help of Tanjirou Kamado, Zenitsu Agatsuma, and Inosuke Hashibira to infiltrate the district's most prominent houses\nand locate the depraved Upper Rank demon.",
 );
 
 final List<Content> previews = const [

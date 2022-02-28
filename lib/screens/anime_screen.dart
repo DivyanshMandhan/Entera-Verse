@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
-
-import 'package:entve/cubits/cubits.dart';
+import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
 import 'package:entve/data/data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:entve/widgets/content_header.dart';
@@ -57,7 +56,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-            child: ContentHeader(featuredContent: sintelContent),
+            child: ContentHeader(featuredContent: demonslayerContent),
           ),
           SliverPadding(
             padding: const EdgeInsets.only(top: 20.0),

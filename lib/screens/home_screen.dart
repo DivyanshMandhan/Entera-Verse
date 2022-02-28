@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
-import 'package:entve/cubits/cubits.dart';
+import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
 import 'package:entve/data/data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:entve/widgets/content_header.dart';

@@ -125,6 +125,22 @@ class __CustomAppBarMobile extends State<_CustomAppBarMobile>
                           ),
                         ),
                       ),
+                      Positioned(
+                        top: 3.0,
+                        right: 5.0,
+                        child: Container(
+                          child: GestureDetector(
+                            onTap: () {
+                              _textEditingController.clear();
+                            },
+                            child: Icon(
+                              Icons.clear,
+                              size: 20.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -361,6 +377,33 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                                 ),
                               ),
                             ),
+                          ),
+                        ),
+                      ),
+                      AnimatedPositioned(
+                        duration: Duration(milliseconds: 375),
+                        top: 3.0,
+                        right: (toggle == 0) ? 20.0 : 5.0,
+                        curve: Curves.easeOut,
+                        child: Container(
+                          child: AnimatedBuilder(
+                            child: GestureDetector(
+                              onTap: () {
+                                _textEditingController.clear();
+                              },
+                              child: Icon(
+                                Icons.clear,
+                                size: 20.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                            builder: (context, widget) {
+                              return Transform.rotate(
+                                angle: _con.value * 2.0 * 22 / 7,
+                                child: widget,
+                              );
+                            },
+                            animation: _con,
                           ),
                         ),
                       ),

@@ -1,5 +1,6 @@
 class Assets {
   static const String _images = 'assets/images/movies/';
+  static const String _animeimages = 'assets/images/anime/';
   static const String _images1 = 'assets/images/';
 
   static const String entverse = '${_images1}entera_verse.png';
@@ -10,10 +11,11 @@ class Assets {
   static const String spidermanVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/spiderman.mp4';
 
-  static const String sintel = '${_images}sintel.jpg';
-  static const String sintelTitle = '${_images}sintel_title.png';
-  static const String sintelVideoUrl =
-      'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4';
+  static const String demonslayer = '${_animeimages}demon_slayer.jpg';
+  static const String demonslayerTitle =
+      '${_animeimages}demon_slayer_title.png';
+  static const String demonslayerVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Demon+Slayer+Kimetsu+no+Yaiba.mp4';
 
   static const String atla = '${_images}atla.jpg';
   static const String atlaTitle = '${_images}atla_title.png';

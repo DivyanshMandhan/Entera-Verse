@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:entve/models/content_model.dart';
+import 'package:entve/screens/info_screen.dart';
 import 'package:flutter/material.dart';
 
 class ContentList extends StatelessWidget {
@@ -46,7 +47,10 @@ class ContentList extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 final Content content = contentList[index];
                 return GestureDetector(
-                  onTap: () => print(content.name),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => InfoScreen(content: content)));
+                  },
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 8.0),
                     height: isOriginals ? 400.0 : 200.0,

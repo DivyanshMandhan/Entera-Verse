@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_print, deprecated_member_use, prefer_const_constructors
 
 import 'package:entve/models/content_model.dart';
+import 'package:entve/screens/info_screen.dart';
+import 'package:entve/screens/play_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:entve/widgets/vertical_icon_button.dart';
 import 'package:flutter/material.dart';
@@ -75,11 +77,33 @@ class _ContentHeaderMobile extends StatelessWidget {
                 title: 'List',
                 onTap: () => print('My List'),
               ),
-              _PlayButton(),
+              FlatButton.icon(
+                padding: !Responsive.isDesktop(context)
+                    ? const EdgeInsets.fromLTRB(15.0, 5.0, 20.0, 5.0)
+                    : const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          PlayScreen(content: featuredContent)));
+                },
+                color: Colors.white,
+                icon: const Icon(Icons.play_arrow, size: 30.0),
+                label: const Text(
+                  'Play',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
               VerticalIconButton(
                 icon: Icons.info_outline,
                 title: 'Info',
-                onTap: () => print('Info'),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          InfoScreen(content: featuredContent)));
+                },
               ),
             ],
           ),
@@ -190,12 +214,34 @@ class __ContentHeaderDesktopState extends State<_ContentHeaderDesktop> {
                 const SizedBox(height: 20.0),
                 Row(
                   children: [
-                    _PlayButton(),
+                    FlatButton.icon(
+                      padding: !Responsive.isDesktop(context)
+                          ? const EdgeInsets.fromLTRB(15.0, 5.0, 20.0, 5.0)
+                          : const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                PlayScreen(content: widget.featuredContent)));
+                      },
+                      color: Colors.white,
+                      icon: const Icon(Icons.play_arrow, size: 30.0),
+                      label: const Text(
+                        'Play',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
                     const SizedBox(width: 16.0),
                     FlatButton.icon(
                       padding:
                           const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) =>
+                                InfoScreen(content: widget.featuredContent)));
+                      },
                       color: Colors.white,
                       icon: const Icon(Icons.info_outline, size: 30.0),
                       label: const Text(
@@ -227,27 +273,6 @@ class __ContentHeaderDesktopState extends State<_ContentHeaderDesktop> {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _PlayButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FlatButton.icon(
-      padding: !Responsive.isDesktop(context)
-          ? const EdgeInsets.fromLTRB(15.0, 5.0, 20.0, 5.0)
-          : const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
-      onPressed: () => print('Play'),
-      color: Colors.white,
-      icon: const Icon(Icons.play_arrow, size: 30.0),
-      label: const Text(
-        'Play',
-        style: TextStyle(
-          fontSize: 16.0,
-          fontWeight: FontWeight.w600,
-        ),
       ),
     );
   }

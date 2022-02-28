@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
-import 'package:entve/cubits/cubits.dart';
+import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
 import 'package:entve/screens/anime_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:flutter/material.dart';
