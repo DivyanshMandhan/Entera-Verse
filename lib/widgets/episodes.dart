@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 
 import '../screens/play_screen.dart';
 
-class Previews extends StatelessWidget {
+class Episodes extends StatelessWidget {
   final String title;
   final List<Content> contentList;
 
-  const Previews({
+  const Episodes({
     Key? key,
     required this.title,
     required this.contentList,
@@ -19,27 +19,27 @@ class Previews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      mobile: _PreviewScreenMobile(title: title, contentList: contentList),
-      desktop: _PreviewScreenDesktop(title: title, contentList: contentList),
+      mobile: _EpisodesScreenMobile(title: title, contentList: contentList),
+      desktop: _EpisodesScreenDesktop(title: title, contentList: contentList),
     );
   }
 }
 
-class _PreviewScreenMobile extends StatefulWidget {
+class _EpisodesScreenMobile extends StatefulWidget {
   final String title;
   final List<Content> contentList;
 
-  const _PreviewScreenMobile({
+  const _EpisodesScreenMobile({
     Key? key,
     required this.title,
     required this.contentList,
   }) : super(key: key);
 
   @override
-  __PreviewScreenMobile createState() => __PreviewScreenMobile();
+  __EpisodesScreenMobile createState() => __EpisodesScreenMobile();
 }
 
-class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
+class __EpisodesScreenMobile extends State<_EpisodesScreenMobile> {
   late ScrollController _scrollController;
 
   late int myindex = 0;
@@ -59,9 +59,9 @@ class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Text(
-            'Featured Shows',
+            'Episodes',
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),
@@ -134,7 +134,7 @@ class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
                                   style: TextStyle(
                                       color: content.color,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 15),
+                                      fontSize: 20),
                                 )),
                           )),
                     ],
@@ -164,21 +164,21 @@ class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
   }
 }
 
-class _PreviewScreenDesktop extends StatefulWidget {
+class _EpisodesScreenDesktop extends StatefulWidget {
   final String title;
   final List<Content> contentList;
 
-  const _PreviewScreenDesktop({
+  const _EpisodesScreenDesktop({
     Key? key,
     required this.title,
     required this.contentList,
   }) : super(key: key);
 
   @override
-  __PreviewScreenDesktop createState() => __PreviewScreenDesktop();
+  __EpisodesScreenDesktop createState() => __EpisodesScreenDesktop();
 }
 
-class __PreviewScreenDesktop extends State<_PreviewScreenDesktop> {
+class __EpisodesScreenDesktop extends State<_EpisodesScreenDesktop> {
   late ScrollController _scrollController;
 
   late int myindex = 0;
@@ -198,9 +198,9 @@ class __PreviewScreenDesktop extends State<_PreviewScreenDesktop> {
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Text(
-            'Featured Shows',
+            'Episodes',
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),

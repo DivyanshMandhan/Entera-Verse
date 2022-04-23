@@ -12,21 +12,23 @@ class Content {
   final String description;
   final Color color;
   final String categories;
-  final int year;
-  final int length;
-  final String star;
+  int? year;
+  int? length;
+  int? episodes;
+  final String rating;
   // final List<String> screenshots;
 
-  const Content({
+  Content({
     required this.name,
     required this.imageUrl,
     this.titleImageUrl = "",
     this.videoUrl = "",
     this.description = "",
     this.categories = "",
-    this.year = 2000,
-    this.length = 120,
-    this.star = '⭐ ⭐ ⭐ ⭐',
+    this.year,
+    this.length,
+    this.episodes,
+    this.rating = "",
     // required this.screenshots,
     this.color = const Color.fromARGB(255, 0, 0, 0),
   });

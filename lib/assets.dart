@@ -1,50 +1,70 @@
 class Assets {
-  static const String _images = 'assets/images/movies/';
-  static const String _animeimages = 'assets/images/anime/';
   static const String _images1 = 'assets/images/';
-
   static const String entverse = '${_images1}entera_verse.png';
   static const String entverseWeb = '${_images1}entera_verse_full.png';
 
+  //Movies
+  static const String _images = 'assets/images/movies/';
+  static const String _animeimages = 'assets/images/anime/';
+
+  static const String moonKnight = '${_images}moonKnight.jpg';
+  static const String moonKnightTitle = '${_images}moonKnight_title.png';
+  static const String moonKnightVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/MoonKnight.mp4';
+
   static const String spiderman = '${_images}spiderman.jpg';
-  static const String spidermanTitle = '${_images}spiderman_title.png';
   static const String spidermanVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/spiderman.mp4';
 
+  static const String noexit = '${_images}noexit.jpg';
+  static const String noexitVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/No+Exit.mp4';
+  static const String chooseordie = '${_images}chooseordie.jpg';
+  static const String chooseordieVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Choose+or+Die.mp4';
+  static const String inbetween = '${_images}in_between.jpg';
+  static const String inbetweenVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/in_between.mp4';
+  static const String turningpoint = '${_images}turning_point.jpg';
+  static const String turningpointVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/The+Turning+Point.mp4';
+
+  static const String peakyBlinders = '${_images}peakyblinders.jpg';
+  static const String peakyBlindersVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Peaky+Blinders+Series+6.mp4';
+  static const String allofUsareDead = '${_images}allofusaredead.jpg';
+  static const String allofUsareDeadVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/All+of+Us+Are+Dead.mp4';
+  static const String moneyheist = '${_images}money_heist.jpeg';
+  static const String moneyheistVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Money+Heist-+Part+5+Vol.+2.mp4';
+  static const String lucifer = '${_images}lucifer.jpg';
+  static const String luciferVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Lucifer+-+Final+Season.mp4';
+  static const String squidGame = '${_images}squidgame.jpg';
+  static const String squidGameVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Squid+Game.mp4';
+
+  static const String badguys = '${_images}badguys.jpg';
+  static const String badguysVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/THE+BAD+GUYS.mp4';
+  static const String doctorStrange = '${_images}doctorstrange.jpg';
+  static const String doctorStrangeVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Doctor+Strange+in+the+Multiverse+of+Madness.mp4';
+  static const String jurassicWorld = '${_images}jurassicworld.jpg';
+  static const String jurassicWorldVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Jurassic+World+Dominion.mp4';
+  static const String theUnbearable = '${_images}theunbearable.jpg';
+  static const String theUnbearableVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/The+Unbearable+Weight+of+Massive+Talent.mp4';
+  static const String thorLoveandThunder = '${_images}thorloveandthunder.jpg';
+  static const String thorLoveandThunderVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Thor-+Love+and+Thunder+.mp4';
+
+  //Anime
   static const String demonslayer = '${_animeimages}demon_slayer.jpg';
   static const String demonslayerTitle =
       '${_animeimages}demon_slayer_title.png';
   static const String demonslayerVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Demon+Slayer+Kimetsu+no+Yaiba.mp4';
-
-  static const String atla = '${_images}atla.jpg';
-  static const String atlaTitle = '${_images}atla_title.png';
-
-  static const String blackMirror = '${_images}black_mirror.jpg';
-  static const String blackMirrorTitle = '${_images}black_mirror_title.png';
-
-  static const String breakingBad = '${_images}breaking_bad.jpg';
-
-  static const String caroleAndTuesday = '${_images}carole_and_tuesday.jpg';
-  static const String caroleAndTuesdayTitle =
-      '${_images}carole_and_tuesday_title.png';
-
-  static const String crown = '${_images}crown.jpg';
-  static const String crownTitle = '${_images}crown_title.png';
-
-  static const String dogs = '${_images}dogs.jpg';
-  static const String explained = '${_images}explained.jpg';
-  static const String htsdof = '${_images}htsdof.jpg';
-  static const String kakegurui = '${_images}kakegurui.jpg';
-  static const String strangerThings = '${_images}stranger_things.jpg';
-  static const String teotfw = '${_images}teotfw.jpg';
-  static const String thirteenReasonsWhy = '${_images}thirteen_reasons_why.jpg';
-  static const String tigerKing = '${_images}tiger_king.jpg';
-
-  static const String umbrellaAcademy = '${_images}umbrella_academy.jpg';
-  static const String umbrellaAcademyTitle =
-      '${_images}umbrella_academy_title.png';
-
-  static const String violetEvergarden = '${_images}violet_evergarden.jpg';
-  static const String witcher = '${_images}witcher.jpg';
 }

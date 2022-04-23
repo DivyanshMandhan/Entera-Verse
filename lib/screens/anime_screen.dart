@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
-import 'package:entve/data/data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:entve/widgets/content_header.dart';
 import 'package:entve/widgets/content_list.dart';
 import 'package:entve/widgets/custom_app_bar.dart';
 import 'package:entve/widgets/previews.dart';
 import 'package:flutter/material.dart';
+
+import '../data/anime_data.dart';
 
 class AnimeScreen extends StatefulWidget {
   const AnimeScreen({Key? key}) : super(key: key);

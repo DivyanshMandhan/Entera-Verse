@@ -2,6 +2,7 @@
 
 import 'package:entve/models/content_model.dart';
 import 'package:entve/screens/info_screen.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ContentList extends StatelessWidget {
@@ -37,37 +38,48 @@ class ContentList extends StatelessWidget {
           // ignore: sized_box_for_whitespace
           Container(
             height: isOriginals ? 500.0 : 220.0,
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(
-                vertical: 12.0,
-                horizontal: 16.0,
-              ),
-              scrollDirection: Axis.horizontal,
-              itemCount: contentList.length,
-              itemBuilder: (BuildContext context, int index) {
-                final Content content = contentList[index];
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => InfoScreen(content: content)));
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                    height: isOriginals ? 400.0 : 200.0,
-                    width: isOriginals ? 200.0 : 130.0,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(content.imageUrl),
-                        fit: BoxFit.cover,
+            child: ScrollConfiguration(
+              behavior: MyCustomScrollBehavior(),
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 12.0,
+                  horizontal: 16.0,
+                ),
+                scrollDirection: Axis.horizontal,
+                itemCount: contentList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final Content content = contentList[index];
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => InfoScreen(content: content)));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                      height: isOriginals ? 400.0 : 200.0,
+                      width: isOriginals ? 200.0 : 130.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(content.imageUrl),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
         ],
       ),
     );
   }
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }

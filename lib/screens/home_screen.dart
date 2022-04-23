@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
-import 'package:entve/data/data.dart';
+import 'package:entve/data/movies_data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:entve/widgets/content_header.dart';
 import 'package:entve/widgets/content_list.dart';
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-            child: ContentHeader(featuredContent: spidermanContent),
+            child: ContentHeader(featuredContent: moonKnightContent),
           ),
           SliverPadding(
             padding: const EdgeInsets.only(top: 20.0),

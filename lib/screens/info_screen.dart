@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors, prefer_const_constructors, avoid_print
 
+import 'package:entve/screens/play_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/content_model.dart';
@@ -71,7 +72,11 @@ class _InfoScreenState extends State<InfoScreen> {
                   child: RawMaterialButton(
                     padding: const EdgeInsets.all(10.0),
                     elevation: 12.0,
-                    onPressed: () => print('Play Video'),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) =>
+                              PlayScreen(content: widget.content)));
+                    },
                     shape: const CircleBorder(),
                     fillColor: Colors.black,
                     child: const Icon(
@@ -126,9 +131,36 @@ class _InfoScreenState extends State<InfoScreen> {
                   ),
                 ),
                 SizedBox(height: 12.0),
-                Text(
-                  widget.content.star,
-                  style: TextStyle(fontSize: 25.0),
+                TextButton(
+                  onPressed: null,
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Colors.black,
+                        style: BorderStyle.solid,
+                        width: 4.0,
+                      ),
+                      borderRadius: BorderRadius.circular(30.0),
+                    )),
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    fixedSize: MaterialStateProperty.all(Size(100.0, 20.0)),
+                    elevation: MaterialStateProperty.all(10),
+                    shadowColor: MaterialStateProperty.all(Colors.black),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        "IMDB",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Container(color: Colors.black, height: 20, width: 4),
+                      Text(widget.content.rating),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 15.0),
                 Row(
@@ -165,6 +197,25 @@ class _InfoScreenState extends State<InfoScreen> {
                         SizedBox(height: 2.0),
                         Text(
                           '${widget.content.length} min',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: <Widget>[
+                        Text(
+                          'Episodes',
+                          style: TextStyle(
+                            color: Colors.black54,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        SizedBox(height: 2.0),
+                        Text(
+                          '${widget.content.episodes}',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.w600,
