@@ -96,7 +96,111 @@ final List<Content> myList = [
       videoUrl: Assets.thorLoveandThunderVideoUrl),
 ];
 
-final List<Content> originals = [
+final List<Content> spring2020 = [
+  Content(
+      name: 'The Rising of the Shield Hero Season 2',
+      categories: 'Action/Adventure/Drama/Fantasy',
+      year: 2022,
+      length: 23,
+      episodes: 13,
+      rating: '7.40',
+      description: 'Second season of Tate no Yuusha no Nariagari.',
+      imageUrl: Assets.riseofshield,
+      videoUrl: Assets.riseofshieldVideoUrl),
+  Content(
+      name: 'Spy x Family',
+      categories: 'Action/Comedy',
+      year: 2022,
+      length: 24,
+      episodes: 12,
+      rating: '9.09',
+      description:
+          "For the agent known as 'Twilight,' no order is too tall if it is for the sake of peace. Operating as Westalis' master spy, Twilight works tirelessly to\nprevent extremists from sparking a war with neighboring country Ostania. For his latest mission, he must investigate Ostanian politician\nDonovan Desmond by infiltrating his son's school: the prestigious Eden Academy. Thus, the agent faces the most difficult task of his career: get\nmarried, have a child, and play family.",
+      imageUrl: Assets.spyfamily,
+      videoUrl: Assets.spyfamilyVideoUrl),
+  Content(
+      name: 'Kaguya-sama: Love Is War - Ultra Romantic',
+      categories: 'Psychological/Romantic/Subtext/School',
+      year: 2022,
+      length: 24,
+      rating: '8.98',
+      description:
+          'Third season of Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen.',
+      imageUrl: Assets.kaguyasama,
+      videoUrl: Assets.kaguyasamaVideoUrl),
+  Content(
+      name: "Shikimori's Not Just a Cutie",
+      categories: 'Comedy/Romance',
+      year: 2022,
+      length: 23,
+      episodes: 12,
+      rating: '7.30',
+      description:
+          'Shikimori seems like the perfect girlfriend: cute, fun to be around, sweet when she wants to be... but she has a cool dark side that comes out\nunder the right circumstances. And her boyfriend Izumi loves to be around when that happens!',
+      imageUrl: Assets.shikamorisan,
+      videoUrl: Assets.shikamorisanVideoUrl),
+  Content(
+      name: "Komi Can't Communicate.",
+      categories: 'Comedy/Drama/Slice of Life',
+      year: 2022,
+      length: 23,
+      rating: '8.33',
+      description: 'Second season of Komi-san wa, Comyushou desu..',
+      imageUrl: Assets.komisan,
+      videoUrl: Assets.komisanVideoUrl),
+  Content(
+      name: 'The Rising of the Shield Hero Season 2',
+      categories: 'Action/Adventure/Drama/Fantasy',
+      year: 2022,
+      length: 23,
+      episodes: 13,
+      rating: '7.40',
+      description: 'Second season of Tate no Yuusha no Nariagari.',
+      imageUrl: Assets.riseofshield,
+      videoUrl: Assets.riseofshieldVideoUrl),
+  Content(
+      name: 'Spy x Family',
+      categories: 'Action/Comedy',
+      year: 2022,
+      length: 24,
+      episodes: 12,
+      rating: '9.09',
+      description:
+          "For the agent known as 'Twilight,' no order is too tall if it is for the sake of peace. Operating as Westalis' master spy, Twilight works tirelessly to\nprevent extremists from sparking a war with neighboring country Ostania. For his latest mission, he must investigate Ostanian politician\nDonovan Desmond by infiltrating his son's school: the prestigious Eden Academy. Thus, the agent faces the most difficult task of his career: get\nmarried, have a child, and play family.",
+      imageUrl: Assets.spyfamily,
+      videoUrl: Assets.spyfamilyVideoUrl),
+  Content(
+      name: 'Kaguya-sama: Love Is War - Ultra Romantic',
+      categories: 'Psychological/Romantic/Subtext/School',
+      year: 2022,
+      length: 24,
+      rating: '8.98',
+      description:
+          'Third season of Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen.',
+      imageUrl: Assets.kaguyasama,
+      videoUrl: Assets.kaguyasamaVideoUrl),
+  Content(
+      name: "Shikimori's Not Just a Cutie",
+      categories: 'Comedy/Romance',
+      year: 2022,
+      length: 23,
+      episodes: 12,
+      rating: '7.30',
+      description:
+          'Shikimori seems like the perfect girlfriend: cute, fun to be around, sweet when she wants to be... but she has a cool dark side that comes out\nunder the right circumstances. And her boyfriend Izumi loves to be around when that happens!',
+      imageUrl: Assets.shikamorisan,
+      videoUrl: Assets.shikamorisanVideoUrl),
+  Content(
+      name: "Komi Can't Communicate.",
+      categories: 'Comedy/Drama/Slice of Life',
+      year: 2022,
+      length: 23,
+      rating: '8.33',
+      description: 'Second season of Komi-san wa, Comyushou desu..',
+      imageUrl: Assets.komisan,
+      videoUrl: Assets.komisanVideoUrl),
+];
+final List<Content> lastUpdated = [
   Content(
       name: 'Peaky Blinders',
       imageUrl: Assets.peakyBlinders,
@@ -139,7 +243,7 @@ final List<Content> originals = [
       videoUrl: Assets.squidGameVideoUrl),
 ];
 
-final List<Content> trending = [
+final List<Content> topAiring = [
   Content(
       name: 'Bad Guys',
       imageUrl: Assets.badguys,

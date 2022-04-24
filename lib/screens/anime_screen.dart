@@ -78,9 +78,9 @@ class _AnimeScreenState extends State<AnimeScreen> {
           ),
           SliverToBoxAdapter(
             child: ContentList(
-              key: PageStorageKey('originals'),
-              title: 'Winter 2022 Anime',
-              contentList: originals,
+              key: PageStorageKey('spring2022'),
+              title: 'Spring 2022 Anime',
+              contentList: spring2020,
               isOriginals: true,
             ),
           ),
@@ -88,7 +88,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
             child: ContentList(
               key: PageStorageKey('originals'),
               title: 'Last Updated',
-              contentList: originals,
+              contentList: lastUpdated,
               isOriginals: true,
             ),
           ),
@@ -98,7 +98,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
               child: ContentList(
                 key: PageStorageKey('trending'),
                 title: 'Top Airing Anime',
-                contentList: trending,
+                contentList: topAiring,
               ),
             ),
           )

@@ -67,4 +67,20 @@ class Assets {
       '${_animeimages}demon_slayer_title.png';
   static const String demonslayerVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Demon+Slayer+Kimetsu+no+Yaiba.mp4';
+
+  static const String riseofshield = '${_animeimages}riseofshiled.jpg';
+  static const String riseofshieldVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/shiedhero.mp4';
+  static const String spyfamily = '${_animeimages}spyfamily.jpg';
+  static const String spyfamilyVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/spyfamily.mp4';
+  static const String kaguyasama = '${_animeimages}kaguyasama.jpg';
+  static const String kaguyasamaVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/kaguyasama.mp4';
+  static const String shikamorisan = '${_animeimages}shikamorisan.jpg';
+  static const String shikamorisanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/shikamorisan.mp4';
+  static const String komisan = '${_animeimages}komisan.jpg';
+  static const String komisanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/komisan.mp4';
 }
