@@ -18,4 +18,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Description
-[url=https://postimg.cc/0691brdr][img]https://i.postimg.cc/0691brdr/Screenshot-1651311331.png[/img][/url]
+
+### Movies Screen
+![Screenshot_1651311331](https://user-images.githubusercontent.com/57166270/166101088-d18f5959-a83e-45b6-ae0f-f472327199e9.png)
+
