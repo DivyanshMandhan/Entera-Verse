@@ -1,6 +1,6 @@
 # Entera Verse
 
-An all in entertainment application.
+An all in one entertainment application.
 
 #### Netflix + Spotify
 
