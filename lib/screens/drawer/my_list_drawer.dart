@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_final_fields
 
 import 'package:entve/screens/collapsing_list.dart';
+import 'package:entve/screens/my_list.dart';
 import 'package:entve/screens/nav_screen/latest_nav_screen.dart';
 import 'package:entve/screens/nav_screen/music_nav_screen.dart';
 import 'package:entve/screens/nav_screen/my_list_nav_screen.dart';
@@ -10,21 +11,21 @@ import 'package:flutter/material.dart';
 
 import '../../models/navigation_model.dart';
 
-class MusicCollapsingDrawer extends StatefulWidget {
+class AnimeCollapsingDrawer extends StatefulWidget {
   @override
-  MusicCollapsingDrawerState createState() {
-    return MusicCollapsingDrawerState();
+  AnimeCollapsingDrawerState createState() {
+    return AnimeCollapsingDrawerState();
   }
 }
 
-class MusicCollapsingDrawerState extends State<MusicCollapsingDrawer>
+class AnimeCollapsingDrawerState extends State<AnimeCollapsingDrawer>
     with SingleTickerProviderStateMixin {
   double maxWidth = 210;
   double minWidth = 70;
   bool isCollapsed = false;
   late AnimationController _animationController;
   late Animation<double> widthAnimation;
-  int currentSelectedIndex = 2;
+  int currentSelectedIndex = 4;
 
   final List<Widget> _screens = [
     NavScreen(),

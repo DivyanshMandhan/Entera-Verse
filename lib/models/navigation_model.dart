@@ -16,26 +16,26 @@ List<NavigationModel> navigationItems = [
   NavigationModel(
     title: "Movies",
     icon: Icons.local_movies,
-    color: Colors.orange,
+    color: Colors.white,
   ),
   NavigationModel(
     title: "Anime",
     icon: Icons.catching_pokemon,
-    color: Colors.red,
+    color: Colors.white,
   ),
   NavigationModel(
     title: "Music",
     icon: Icons.music_note_rounded,
-    color: Colors.yellow,
+    color: Colors.white,
   ),
   NavigationModel(
     title: "Latest",
     icon: Icons.whatshot,
-    color: Colors.blue,
+    color: Colors.white,
   ),
   NavigationModel(
     title: "MyList",
     icon: Icons.list_alt_rounded,
-    color: Colors.green,
+    color: Colors.white,
   ),
 ];

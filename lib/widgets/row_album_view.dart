@@ -3,15 +3,17 @@
 import 'package:entve/screens/music_screen.dart';
 import 'package:flutter/material.dart';
 
-class AlbumView extends StatefulWidget {
+class RowAlbumView extends StatefulWidget {
   final ImageProvider image;
+  final Color color;
 
-  const AlbumView({Key? key, required this.image}) : super(key: key);
+  const RowAlbumView({Key? key, required this.image, required this.color})
+      : super(key: key);
   @override
-  _AlbumViewState createState() => _AlbumViewState();
+  _RowAlbumViewState createState() => _RowAlbumViewState();
 }
 
-class _AlbumViewState extends State<AlbumView> {
+class _RowAlbumViewState extends State<RowAlbumView> {
   late ScrollController scrollController;
   double imageSize = 0;
   double initialSize = 240;
@@ -47,6 +49,7 @@ class _AlbumViewState extends State<AlbumView> {
 
   @override
   Widget build(BuildContext context) {
+    final cardSize = MediaQuery.of(context).size.width / 2 - 32;
     return Scaffold(
       body: Stack(
         children: [
@@ -54,7 +57,7 @@ class _AlbumViewState extends State<AlbumView> {
             height: containerHeight,
             width: MediaQuery.of(context).size.width,
             alignment: Alignment.center,
-            color: Colors.pink,
+            color: widget.color,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -71,11 +74,14 @@ class _AlbumViewState extends State<AlbumView> {
                         )
                       ],
                     ),
-                    child: Image(
-                      image: widget.image,
-                      width: imageSize,
-                      height: imageSize,
-                      fit: BoxFit.cover,
+                    child: Positioned(
+                      left: 0,
+                      child: Image(
+                        image: widget.image,
+                        width: imageSize,
+                        height: imageSize,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -122,13 +128,12 @@ class _AlbumViewState extends State<AlbumView> {
                                 Row(
                                   children: [
                                     Image(
-                                      image: AssetImage(
-                                          'assets/images/entera_verse.png'),
+                                      image: AssetImage('assets/logo.png'),
                                       width: 32,
                                       height: 32,
                                     ),
                                     SizedBox(width: 8),
-                                    Text("Entera Verse")
+                                    Text("Spotify")
                                   ],
                                 ),
                                 SizedBox(height: 8),
@@ -167,7 +172,7 @@ class _AlbumViewState extends State<AlbumView> {
                         SizedBox(height: 32),
                         Text(
                           "You might also like",
-                          style: TextStyle(color: Colors.white),
+                          style: Theme.of(context).textTheme.headline6,
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16),
@@ -175,12 +180,14 @@ class _AlbumViewState extends State<AlbumView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album3.jpg"),
                                 onTap: () {},
                               ),
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album5.jpg"),
@@ -195,12 +202,14 @@ class _AlbumViewState extends State<AlbumView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album6.jpg"),
                                 onTap: () {},
                               ),
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album9.jpg"),
@@ -215,12 +224,14 @@ class _AlbumViewState extends State<AlbumView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album10.jpg"),
                                 onTap: () {},
                               ),
                               AlbumCard(
+                                size: cardSize,
                                 label: "Get Turnt",
                                 image: AssetImage(
                                     "assets/images/music/album4.jpg"),
@@ -287,7 +298,9 @@ class _AlbumViewState extends State<AlbumView> {
                               height: 64,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                  shape: BoxShape.circle, color: Colors.pink),
+                                shape: BoxShape.circle,
+                                color: Color(0xff14D860),
+                              ),
                               child: Icon(
                                 Icons.play_arrow,
                                 size: 38,

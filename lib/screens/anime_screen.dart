@@ -73,7 +73,7 @@ class _AnimeScreenState extends State<AnimeScreen> {
             child: ContentList(
               key: PageStorageKey('myList'),
               title: 'My List',
-              contentList: myList,
+              contentList: A_myList,
             ),
           ),
           SliverToBoxAdapter(

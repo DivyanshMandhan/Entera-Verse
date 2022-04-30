@@ -68,6 +68,22 @@ class Assets {
   static const String demonslayerVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/Demon+Slayer+Kimetsu+no+Yaiba.mp4';
 
+  static const String attackontitan = '${_animeimages}attackontitan.jpg';
+  static const String attackontitanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/attackontitan.mp4';
+  static const String deathnote = '${_animeimages}deathnote.jpg';
+  static const String deathnoteVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/deathnote.mp4';
+  static const String fullmetal = '${_animeimages}fullmetal.jpg';
+  static const String fullmetalVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/fullmetal.mp4';
+  static const String onepunchman = '${_animeimages}onepunchman.jpg';
+  static const String onepunchmanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/onepunchman.mp4';
+  static const String sao = '${_animeimages}sao.jpg';
+  static const String saoVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/sao.mp4';
+
   static const String riseofshield = '${_animeimages}riseofshiled.jpg';
   static const String riseofshieldVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/shiedhero.mp4';
@@ -83,4 +99,34 @@ class Assets {
   static const String komisan = '${_animeimages}komisan.jpg';
   static const String komisanVideoUrl =
       'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/komisan.mp4';
+
+  static const String trappedinadating = '${_animeimages}trappedinadating.jpg';
+  static const String trappedinadatingVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/trappedinadating.mp4';
+  static const String acoupleof = '${_animeimages}acoupleof.jpg';
+  static const String acoupleofVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/acoupleof.mp4';
+  static const String loveallplay = '${_animeimages}loveallplay.jpg';
+  static const String loveallplayVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/loveallplay.mp4';
+  static const String boruto = '${_animeimages}boruto.jpg';
+
+  static const String kingdom4 = '${_animeimages}kingdom4.jpg';
+  static const String kingdom4VideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/kingdom4.mp4';
+
+  static const String onepiece = '${_animeimages}onepiece.jpg';
+  static const String onepieceVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/One+Piece.mp4';
+  static const String holograffiti = '${_animeimages}holograffiti.jpg';
+
+  static const String yaboy = '${_animeimages}yaboy.jpg';
+  static const String yaboyVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/yaboy.mp4';
+  static const String summertime = '${_animeimages}summertime.jpg';
+  static const String summertimeVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/summertime.mp4';
+  static const String detectiveconan = '${_animeimages}detectiveconan.jpg';
+  static const String detectiveconanVideoUrl =
+      'https://video5618.s3.us-east-2.amazonaws.com/entera_verse/DetectiveConan.mp4';
 }

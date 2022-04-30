@@ -1,6 +1,8 @@
 // ignore_for_file: todo,avoid_print, prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, prefer_function_declarations_over_variables, sized_box_for_whitespace
 
 import 'package:entve/screens/nav_screen/anime_nav_screen.dart';
+import 'package:entve/screens/nav_screen/latest_nav_screen.dart';
+import 'package:entve/screens/nav_screen/my_list_nav_screen.dart';
 import 'package:entve/screens/nav_screen/nav_screen.dart';
 
 import 'package:entve/widgets/responsive.dart';
@@ -194,7 +196,7 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                 // TODO : MOVIES
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: getColor(Colors.white12, Colors.orange),
+                    backgroundColor: getColor(Colors.white12, Colors.white24),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                   ),
@@ -214,7 +216,7 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                 // TODO : ANIME
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: getColor(Colors.white12, Colors.red),
+                    backgroundColor: getColor(Colors.white12, Colors.white24),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                   ),
@@ -234,7 +236,7 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                 // TODO : MUSIC
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: getColor(Colors.white12, Colors.yellow),
+                    backgroundColor: getColor(Colors.white12, Colors.white24),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                   ),
@@ -254,13 +256,13 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                 // TODO: LATEST
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: getColor(Colors.white12, Colors.blue),
+                    backgroundColor: getColor(Colors.white12, Colors.white24),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                   ),
                   onPressed: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => AnimeNavScreen()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => LatestNavScreen()));
                   },
                   child: Text(
                     'Latest',
@@ -274,13 +276,13 @@ class __CustomAppBarDesktop extends State<_CustomAppBarDesktop>
                 // TODO: MY LIST
                 TextButton(
                   style: ButtonStyle(
-                    backgroundColor: getColor(Colors.white12, Colors.green),
+                    backgroundColor: getColor(Colors.white12, Colors.white24),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                   ),
                   onPressed: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => AnimeNavScreen()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => MyListNavScreen()));
                   },
                   child: Text(
                     'MyList',

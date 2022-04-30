@@ -3,12 +3,14 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:entve/cubits/app_bar/app_bar_cubit.dart';
+import 'package:entve/widgets/current_track.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:entve/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/album_view.dart';
+import '../widgets/row_album_view.dart';
 
 class MusicScreen extends StatefulWidget {
   const MusicScreen({Key? key}) : super(key: key);
@@ -107,6 +109,23 @@ class _MusicScreenState extends State<MusicScreen> {
                             print("Error on pause audio.");
                           }
                         }
+                        final snackBar = SnackBar(
+                          elevation: 15,
+                          duration: const Duration(seconds: 10),
+                          content: Text(
+                              'Excuses\nAp Dhillon,Gurinder Gill,Intense',
+                              style: TextStyle(
+                                  color: Colors.white54,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600)),
+                          action: SnackBarAction(
+                            textColor: Colors.red,
+                            label: 'Cancel',
+                            onPressed: () {},
+                          ),
+                        );
+
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       },
                       onDoubleTap: () async {
                         int result = await player.stop();
@@ -164,6 +183,22 @@ class _MusicScreenState extends State<MusicScreen> {
                           print("Error on pause audio.");
                         }
                       }
+                      final snackBar = SnackBar(
+                        elevation: 15,
+                        duration: const Duration(seconds: 10),
+                        content: Text('Lovely\nBillie Eilish,Khalid',
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
+                        action: SnackBarAction(
+                          textColor: Colors.red,
+                          label: 'Cancel',
+                          onPressed: () {},
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     onDoubleTap: () async {
                       int result = await player.stop();
@@ -221,6 +256,22 @@ class _MusicScreenState extends State<MusicScreen> {
                           print("Error on pause audio.");
                         }
                       }
+                      final snackBar = SnackBar(
+                        elevation: 15,
+                        duration: const Duration(seconds: 10),
+                        content: Text('Gurenge\nLisa',
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
+                        action: SnackBarAction(
+                          textColor: Colors.red,
+                          label: 'Cancel',
+                          onPressed: () {},
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     onDoubleTap: () async {
                       int result = await player.stop();
@@ -278,6 +329,22 @@ class _MusicScreenState extends State<MusicScreen> {
                           print("Error on pause audio.");
                         }
                       }
+                      final snackBar = SnackBar(
+                        elevation: 15,
+                        duration: const Duration(seconds: 10),
+                        content: Text('Bijlee Bijlee\nHardy Sandhu',
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
+                        action: SnackBarAction(
+                          textColor: Colors.red,
+                          label: 'Cancel',
+                          onPressed: () {},
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     onDoubleTap: () async {
                       int result = await player.stop();
@@ -335,6 +402,23 @@ class _MusicScreenState extends State<MusicScreen> {
                           print("Error on pause audio.");
                         }
                       }
+                      final snackBar = SnackBar(
+                        elevation: 15,
+                        duration: const Duration(seconds: 10),
+                        content: Text(
+                            'Mood(feat. iann dior)\n24k Goldn,iann dior',
+                            style: TextStyle(
+                                color: Colors.white54,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
+                        action: SnackBarAction(
+                          textColor: Colors.red,
+                          label: 'Cancel',
+                          onPressed: () {},
+                        ),
+                      );
+
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     onDoubleTap: () async {
                       int result = await player.stop();
@@ -386,46 +470,58 @@ class _MusicScreenState extends State<MusicScreen> {
                     ),
                     SizedBox(height: 16),
                     Row(
-                      children: const [
+                      children: [
                         RowAlbumCard(
-                          label: "Top 50 - Global",
+                          label: "Top 50-\nGlobal",
                           image: AssetImage("assets/images/music/top50.jpg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                         SizedBox(width: 16),
                         RowAlbumCard(
                           label: "Anime",
                           image: AssetImage("assets/images/music/anime.jpg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                       ],
                     ),
                     SizedBox(height: 16),
                     Row(
-                      children: const [
+                      children: [
                         RowAlbumCard(
                           label: "RapCaviar",
                           image: AssetImage("assets/images/music/rap.jpg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                         SizedBox(width: 16),
                         RowAlbumCard(
                           label: "BollyWood",
                           image:
                               AssetImage("assets/images/music/bollywood.jpg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                       ],
                     ),
                     SizedBox(height: 16),
                     Row(
-                      children: const [
+                      children: [
                         RowAlbumCard(
                           label: "Top 50 - USA",
                           image:
                               AssetImage("assets/images/music/top-50_usa.jpg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                         SizedBox(width: 16),
                         RowAlbumCard(
                           label: "HollyWood",
                           image:
                               AssetImage("assets/images/music/hollywood.jpeg"),
+                          onTap: () {},
+                          color: Colors.blue,
                         ),
                       ],
                     ),
@@ -630,11 +726,15 @@ class _MusicScreenState extends State<MusicScreen> {
 
 class RowAlbumCard extends StatelessWidget {
   final AssetImage image;
+  final VoidCallback onTap;
   final String label;
+  final Color color;
   const RowAlbumCard({
     Key? key,
     required this.image,
     required this.label,
+    required this.onTap,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -656,12 +756,25 @@ class RowAlbumCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             SizedBox(width: 8),
-            Text(
-              label,
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white),
+            TextButton(
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => RowAlbumView(
+                //       image: image,
+                //       color: Colors.blue,
+                //     ),
+                //   ),
+                // );
+              },
+              child: Text(
+                label,
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white),
+              ),
             ),
           ],
         ),
@@ -687,14 +800,14 @@ class AlbumCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => AlbumView(
-              image: image,
-            ),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => AlbumView(
+        //       image: image,
+        //     ),
+        //   ),
+        // );
       },
       child: Expanded(
           flex: 1,

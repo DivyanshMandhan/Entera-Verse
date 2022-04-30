@@ -16,7 +16,8 @@ class Content {
   int? length;
   int? episodes;
   final String rating;
-  // final List<String> screenshots;
+  List<Content>? eps;
+  List<String>? screenshots;
 
   Content({
     required this.name,
@@ -29,7 +30,8 @@ class Content {
     this.length,
     this.episodes,
     this.rating = "",
-    // required this.screenshots,
+    this.eps,
+    this.screenshots,
     this.color = const Color.fromARGB(255, 0, 0, 0),
   });
 }

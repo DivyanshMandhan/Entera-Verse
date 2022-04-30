@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors, prefer_const_constructors, avoid_print
+// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors, prefer_const_constructors, avoid_print, must_be_immutable
 
 import 'package:entve/screens/play_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/content_model.dart';
 import '../widgets/circular_clipper.dart';
+import '../widgets/episodes.dart';
 
 class InfoScreen extends StatefulWidget {
   final Content content;
@@ -237,6 +238,13 @@ class _InfoScreenState extends State<InfoScreen> {
                     ),
                   ),
                 ),
+                SizedBox(height: 12.0),
+                SizedBox(height: 15.0),
+                Episodes(
+                  key: PageStorageKey('episodes'),
+                  title: 'Episodes',
+                  contentList: widget.content.eps,
+                ),
               ],
             ),
           ),
@@ -252,81 +260,82 @@ class _InfoScreenState extends State<InfoScreen> {
   }
 }
 
-class ContentScroll extends StatelessWidget {
-  final List<String> images;
-  final String title;
-  final double imageHeight;
-  final double imageWidth;
+// class ContentScroll extends StatelessWidget {
+//   List<String>? images;
+//   final String title;
+//   final double imageHeight;
+//   final double imageWidth;
 
-  const ContentScroll({
-    required this.images,
-    required this.title,
-    required this.imageHeight,
-    required this.imageWidth,
-  });
+//   ContentScroll({
+//     this.images,
+//     required this.title,
+//     required this.imageHeight,
+//     required this.imageWidth,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              GestureDetector(
-                onTap: () => print('View $title'),
-                child: const Icon(
-                  Icons.arrow_forward,
-                  color: Colors.black,
-                  size: 30.0,
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: imageHeight,
-          child: ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            scrollDirection: Axis.horizontal,
-            itemCount: images.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Container(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10.0,
-                  vertical: 20.0,
-                ),
-                width: imageWidth,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black54,
-                      offset: Offset(0.0, 4.0),
-                      blurRadius: 6.0,
-                    ),
-                  ],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
-                  child: Image(
-                    image: AssetImage(images[index]),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-      ],
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: <Widget>[
+//         Padding(
+//           padding: const EdgeInsets.symmetric(horizontal: 40.0),
+//           child: Row(
+//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//             children: <Widget>[
+//               Text(
+//                 title,
+//                 style: const TextStyle(
+//                   color: Colors.black,
+//                   fontSize: 20.0,
+//                   fontWeight: FontWeight.w600,
+//                 ),
+//               ),
+//               GestureDetector(
+//                 onTap: () => print('View $title'),
+//                 child: const Icon(
+//                   Icons.arrow_forward,
+//                   color: Colors.black,
+//                   size: 30.0,
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//         SizedBox(
+//           height: imageHeight,
+//           child: ListView.builder(
+//             padding: const EdgeInsets.symmetric(horizontal: 30.0),
+//             scrollDirection: Axis.horizontal,
+//             itemCount: images!.length,
+//             itemBuilder: (BuildContext context, int index) {
+//               return Container(
+//                 margin: const EdgeInsets.symmetric(
+//                   horizontal: 10.0,
+//                   vertical: 20.0,
+//                 ),
+//                 width: imageWidth,
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(10.0),
+//                   boxShadow: const [
+//                     BoxShadow(
+//                       color: Colors.black54,
+//                       offset: Offset(0.0, 4.0),
+//                       blurRadius: 6.0,
+//                     ),
+//                   ],
+//                 ),
+//                 child: ClipRRect(
+//                   borderRadius: BorderRadius.circular(10.0),
+//                   child: Image(
+//                     image: AssetImage(images![index]),
+//                     fit: BoxFit.cover,
+//                   ),
+//                 ),
+//               );
+//             },
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }

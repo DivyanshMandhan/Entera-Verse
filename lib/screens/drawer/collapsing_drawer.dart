@@ -1,7 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_final_fields
 
 import 'package:entve/screens/collapsing_list.dart';
+import 'package:entve/screens/nav_screen/latest_nav_screen.dart';
 import 'package:entve/screens/nav_screen/music_nav_screen.dart';
+import 'package:entve/screens/nav_screen/my_list_nav_screen.dart';
 import 'package:entve/screens/nav_screen/nav_screen.dart';
 import 'package:entve/screens/nav_screen/anime_nav_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +30,8 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     NavScreen(),
     AnimeNavScreen(),
     MusicNavScreen(),
-    Scaffold(),
-    Scaffold(),
+    LatestNavScreen(),
+    MyListNavScreen(),
   ];
 
   @override

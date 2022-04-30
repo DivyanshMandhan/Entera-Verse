@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print, deprecated_member_use, prefer_const_constructors
 
 import 'package:entve/models/content_model.dart';
-import 'package:entve/screens/episodes_screen.dart';
 import 'package:entve/screens/info_screen.dart';
+import 'package:entve/screens/play_screen.dart';
 import 'package:entve/widgets/responsive.dart';
 import 'package:entve/widgets/vertical_icon_button.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +84,7 @@ class _ContentHeaderMobile extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) =>
-                          EpisodesScreen(content: featuredContent)));
+                          PlayScreen(content: featuredContent)));
                 },
                 color: Colors.white,
                 icon: const Icon(Icons.play_arrow, size: 30.0),
@@ -220,8 +220,8 @@ class __ContentHeaderDesktopState extends State<_ContentHeaderDesktop> {
                           : const EdgeInsets.fromLTRB(25.0, 10.0, 30.0, 10.0),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => EpisodesScreen(
-                                content: widget.featuredContent)));
+                            builder: (context) =>
+                                PlayScreen(content: widget.featuredContent)));
                       },
                       color: Colors.white,
                       icon: const Icon(Icons.play_arrow, size: 30.0),

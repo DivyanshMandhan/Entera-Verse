@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:entve/models/content_model.dart';
 import 'package:entve/widgets/responsive.dart';
 
@@ -8,12 +10,12 @@ import '../screens/play_screen.dart';
 
 class Episodes extends StatelessWidget {
   final String title;
-  final List<Content> contentList;
+  List<Content>? contentList;
 
-  const Episodes({
+  Episodes({
     Key? key,
     required this.title,
-    required this.contentList,
+    this.contentList,
   }) : super(key: key);
 
   @override
@@ -27,12 +29,12 @@ class Episodes extends StatelessWidget {
 
 class _EpisodesScreenMobile extends StatefulWidget {
   final String title;
-  final List<Content> contentList;
+  List<Content>? contentList;
 
-  const _EpisodesScreenMobile({
+  _EpisodesScreenMobile({
     Key? key,
     required this.title,
-    required this.contentList,
+    this.contentList,
   }) : super(key: key);
 
   @override
@@ -81,9 +83,9 @@ class __EpisodesScreenMobile extends State<_EpisodesScreenMobile> {
               controller: _scrollController,
               physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: widget.contentList.length,
+              itemCount: widget.contentList!.length,
               itemBuilder: (BuildContext context, int index) {
-                final Content content = widget.contentList[index];
+                final Content content = widget.contentList![index];
 
                 return InkWell(
                   child: Stack(
@@ -134,7 +136,7 @@ class __EpisodesScreenMobile extends State<_EpisodesScreenMobile> {
                                   style: TextStyle(
                                       color: content.color,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 15),
                                 )),
                           )),
                     ],
@@ -166,12 +168,12 @@ class __EpisodesScreenMobile extends State<_EpisodesScreenMobile> {
 
 class _EpisodesScreenDesktop extends StatefulWidget {
   final String title;
-  final List<Content> contentList;
+  List<Content>? contentList;
 
-  const _EpisodesScreenDesktop({
+  _EpisodesScreenDesktop({
     Key? key,
     required this.title,
-    required this.contentList,
+    this.contentList,
   }) : super(key: key);
 
   @override
@@ -220,9 +222,9 @@ class __EpisodesScreenDesktop extends State<_EpisodesScreenDesktop> {
               controller: _scrollController,
               physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: widget.contentList.length,
+              itemCount: widget.contentList!.length,
               itemBuilder: (BuildContext context, int index) {
-                final Content content = widget.contentList[index];
+                final Content content = widget.contentList![index];
 
                 return InkWell(
                   child: Stack(

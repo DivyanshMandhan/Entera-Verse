@@ -99,9 +99,8 @@ class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
                             fit: BoxFit.cover,
                           ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side:
-                                  BorderSide(width: 4.0, color: content.color)),
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
                       ),
                       Container(
@@ -119,20 +118,19 @@ class __PreviewScreenMobile extends State<_PreviewScreenMobile> {
                             end: Alignment.topCenter,
                           ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side:
-                                  BorderSide(width: 4.0, color: content.color)),
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
                       ),
                       Positioned(
-                          bottom: -20,
+                          bottom: -30,
                           child: Center(
                             child: SizedBox(
                                 height: 60.0,
                                 child: Text(
                                   content.name,
-                                  style: TextStyle(
-                                      color: content.color,
+                                  style: const TextStyle(
+                                      color: Colors.white70,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15),
                                 )),
@@ -238,9 +236,8 @@ class __PreviewScreenDesktop extends State<_PreviewScreenDesktop> {
                             fit: BoxFit.cover,
                           ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side:
-                                  BorderSide(width: 4.0, color: content.color)),
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
                       ),
                       Container(
@@ -258,20 +255,19 @@ class __PreviewScreenDesktop extends State<_PreviewScreenDesktop> {
                             end: Alignment.topCenter,
                           ),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side:
-                                  BorderSide(width: 4.0, color: content.color)),
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
                       ),
                       Positioned(
-                          bottom: -20,
+                          bottom: -30,
                           child: Center(
                             child: SizedBox(
                                 height: 60.0,
                                 child: Text(
                                   content.name,
-                                  style: TextStyle(
-                                      color: content.color,
+                                  style: const TextStyle(
+                                      color: Colors.white70,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 )),
