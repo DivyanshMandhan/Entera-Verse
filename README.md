@@ -1,5 +1,6 @@
 # Entera Verse
 
+![entera_verseW](https://user-images.githubusercontent.com/57166270/177031905-dc233360-dcc8-4888-86a9-44846962e33e.png)
 An all in one entertainment application.
 
 #### Netflix + Spotify
